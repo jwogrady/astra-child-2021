@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-01-14
+
 ### Changed
 - Updated `woocommerce/checkout/thankyou.php` from WooCommerce v3.7.0 to v8.1.0
 - Uses `wc_get_template()` for order-received message (WooCommerce standard)
@@ -48,5 +50,6 @@ Use conventional commits when updating this changelog:
 - `docs:` for documentation only (no changelog entry needed)
 - `chore:` for maintenance (no changelog entry needed unless user-facing)
 
-[Unreleased]: https://github.com/jwogrady/astra-child-2021/compare/v1.0.0...HEAD
+[Unreleased]: https://github.com/jwogrady/astra-child-2021/compare/v1.0.1...HEAD
+[1.0.1]: https://github.com/jwogrady/astra-child-2021/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/jwogrady/astra-child-2021/releases/tag/v1.0.0
