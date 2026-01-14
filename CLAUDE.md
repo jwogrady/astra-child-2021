@@ -13,8 +13,10 @@ WordPress child theme for [2021training.com](https://2021training.com), an onlin
 
 ## Versioning & Commits
 
-- **Semantic Versioning:** MAJOR.MINOR.PATCH (e.g., 1.0.0)
-- **Conventional Commits:** Use prefixes like `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`
+**ALWAYS use Semantic Versioning and Conventional Commits for this project.**
+
+- **Semantic Versioning:** ALWAYS use MAJOR.MINOR.PATCH format (e.g., 1.0.0)
+- **Conventional Commits:** ALWAYS use prefixes: `feat:`, `fix:`, `docs:`, `refactor:`, `chore:`
 - **Version Location:** `style.css` header (line 5: `Version:`)
 
 ### Commit Examples
@@ -41,6 +43,25 @@ astra-child-2021/
     └── checkout/
         └── thankyou.php   # Custom order confirmation page
 ```
+
+## Extract Directory (Development Reference)
+
+The `extract/` directory (git-ignored) contains source plugin/template files used as reference for maintaining consistency in child theme overrides and customizations:
+
+```
+extract/
+├── woocommerce-gateway-authorize-net-cim/   # Authorize.Net CIM plugin (SkyVerge)
+├── woocommerce/                              # Latest WooCommerce plugin source
+└── woocommerce-2021training/                 # Custom plugin: adds users to LMS on purchase
+```
+
+### Purpose
+- **woocommerce-gateway-authorize-net-cim**: Reference for payment gateway JS paths and SkyVerge framework structure. Used to verify script loading fixes in `functions.php:27-75`.
+- **woocommerce**: Source templates for WooCommerce overrides. Compare `templates/checkout/thankyou.php` with child theme version when updating.
+- **woocommerce-2021training**: Custom plugin that handles user enrollment in LMS (class.2021training.com) after purchase.
+
+### Keeping Files Consistent
+When updating plugins on production, update the corresponding `extract/` folder locally to maintain accurate reference copies. This ensures child theme overrides remain compatible with current plugin versions.
 
 ## Key Customizations
 

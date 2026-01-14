@@ -72,6 +72,7 @@ wp-config-local.php
 # Local Development
 # ===================
 .claude/settings.local.json
+extract/
 
 # ===================
 # Release Archives
