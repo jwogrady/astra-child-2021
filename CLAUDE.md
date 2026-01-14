@@ -1,3 +1,4 @@
+<!-- cSpell:words jwogrady woocommerce mysqlnd -->
 # Astra Child 2021 - Project Documentation
 
 **Copyright (c) 2021-2026 Status26 Inc.**
