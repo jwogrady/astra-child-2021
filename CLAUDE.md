@@ -31,7 +31,7 @@ chore: bump version to 1.1.0
 | `functions.php` | 27-75 | Authorize.Net payment fix |
 | `functions.php` | 80-149 | State Pages CPT |
 | `functions.php` | 151-165 | Custom navigation menus |
-| `woocommerce/checkout/thankyou.php` | 44-50 | Custom login credentials |
+| `woocommerce/checkout/thankyou.php` | 46-54 | Custom login credentials (v8.1.0) |
 
 ## Extract Directory
 
@@ -55,8 +55,8 @@ The `extract/` directory (git-ignored) contains plugin source files for referenc
 
 ### Update WooCommerce Template
 1. Compare `extract/woocommerce/templates/checkout/thankyou.php` with child theme version
-2. Merge structural changes, preserve custom content (lines 44-50)
-3. Note `@version` in template header
+2. Merge structural changes, preserve custom content (lines 46-54)
+3. Note `@version` in template header (currently v8.1.0)
 
 ### Update jquery.payment.js
 1. Download from https://github.com/stripe-archive/jquery.payment
@@ -72,7 +72,7 @@ The `extract/` directory (git-ignored) contains plugin source files for referenc
 
 ### After WooCommerce Updates
 1. Check template changelog for `thankyou.php` changes
-2. Compare and merge if needed (preserve lines 44-50)
+2. Compare and merge if needed (preserve lines 46-54)
 
 ## Testing Checklist
 
@@ -84,7 +84,7 @@ The `extract/` directory (git-ignored) contains plugin source files for referenc
 
 ## Security Note
 
-`thankyou.php:48` contains hardcoded password "tornado" - consider dynamic generation.
+`thankyou.php:51` contains hardcoded password "tornado" - consider dynamic generation.
 
 ## WordPress Standards
 

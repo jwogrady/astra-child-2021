@@ -43,7 +43,7 @@ Hierarchical CPT with slug `state` for location-specific content. Gutenberg/REST
 Three menu locations: Shop, Blog, Resources.
 
 ### 4. WooCommerce Thank You Page (`woocommerce/checkout/thankyou.php`)
-Custom order confirmation displaying course login credentials. Based on WooCommerce template v3.7.0.
+Custom order confirmation displaying course login credentials. Based on WooCommerce template v8.1.0.
 
 ## Production Environment
 

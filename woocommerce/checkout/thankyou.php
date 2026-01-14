@@ -10,9 +10,11 @@
  * happen. When this occurs the version of the template file will be bumped and
  * the readme will list any important changes.
  *
- * @see https://docs.woocommerce.com/document/template-structure/
+ * @see https://woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
- * @version 3.7.0
+ * @version 8.1.0
+ *
+ * @var WC_Order $order
  */
 
 defined( 'ABSPATH' ) || exit;
@@ -39,16 +41,17 @@ defined( 'ABSPATH' ) || exit;
 
 		<?php else : ?>
 
-			<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), $order ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+			<?php wc_get_template( 'checkout/order-received.php', array( 'order' => $order ) ); ?>
 
-<p>Your online course login information has been emailed to you.  If you don’t see it in your inbox, please check your spam folder.</p>
+			<?php /* BEGIN 2021Training Custom Content */ ?>
+			<p>Your online course login information has been emailed to you. If you don't see it in your inbox, please check your spam folder.</p>
 
-<ul>
-<li style="font-size: 20px; font-weight: bold;">Your login username is: (student email address)</li>
-<li style="font-size: 20px; font-weight: bold;">Your temporary password:  tornado</li>
-<li style="font-size: 20px; font-weight: bold;">Classroom Access: <a href="https://class.2021training.com/www/index.php">Login Here</a></li>
-</ul>
-
+			<ul>
+				<li style="font-size: 20px; font-weight: bold;">Your login username is: (student email address)</li>
+				<li style="font-size: 20px; font-weight: bold;">Your temporary password: tornado</li>
+				<li style="font-size: 20px; font-weight: bold;">Classroom Access: <a href="https://class.2021training.com/www/index.php">Login Here</a></li>
+			</ul>
+			<?php /* END 2021Training Custom Content */ ?>
 
 			<ul class="woocommerce-order-overview woocommerce-thankyou-order-details order_details">
 
@@ -90,7 +93,7 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php else : ?>
 
-		<p class="woocommerce-notice woocommerce-notice--success woocommerce-thankyou-order-received"><?php echo apply_filters( 'woocommerce_thankyou_order_received_text', esc_html__( 'Thank you. Your order has been received.', 'woocommerce' ), null ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+		<?php wc_get_template( 'checkout/order-received.php', array( 'order' => false ) ); ?>
 
 	<?php endif; ?>
 

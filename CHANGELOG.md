@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Changed
+- Updated `woocommerce/checkout/thankyou.php` from WooCommerce v3.7.0 to v8.1.0
+- Uses `wc_get_template()` for order-received message (WooCommerce standard)
+- Added clear comment markers around custom 2021Training content
+
 ## [1.0.0] - 2026-01-14
 
 ### Added
